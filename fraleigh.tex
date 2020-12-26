@@ -1,0 +1,359 @@
+\documentclass[a4paper,12pt,openany]{book}
+\usepackage{glimpse}
+
+\newcommand{\iso}{\simeq} %A isomorphic B ~ $A \iso B$
+
+\title{Annotations : A first course in\\ abstract algebra, 7th Edition, John B. Fraleigh}
+\author{Jacob Antony\\jacobantony987@gmail.com}
+
+\begin{document}
+\maketitle
+\chapter*{Sets and Relations}
+\textbf{\phantom{}}\marginpar{pp. 15}
+\textbf{There is exactly one set with no elements.}\\
+\begin{story}
+	Any two sets with no elements are equal.
+	Thus the empty set, is the trivial subset of any set.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{pp. 16}
+\textbf{Every definition is an if and only if type of statement}\\
+\begin{story}
+	Definitions are the first among the if and only if statements. We can afford only one definition for an object. Thus equivalent if and only if statements are characterisations and are potential definitions.
+\end{story}
+
+\chapter{Groups and Subgroups}
+\textbf{\phantom{}}\marginpar{\S2.6 pp. 35}
+\textbf{\dots Thus $H$ is not closed under addition.}\\
+\begin{story}
+	$H = \{ 0,1,4,9,\cdots\}$.
+	When we add two element of $H$, say $1+4$, we are not getting an element of $H$.
+	Thus $H$ is not closed under addition.
+	In other words, you can't add two numbers in $H$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2.19 pp. 39}
+\textbf{\dots $\ast$ is not everywhere defined on $\mathbb{Q}$.}\\
+\begin{story}
+	Given $a \ast b = a/b$. Then $2 \ast 0 $ is undefined.
+	Thus $\ast$ is not well-defined on $\mathbb{Q}$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S3.7 pp. 44}
+\textbf{\dots we showed that \dots $<\!U,\cdot\!>$ and $<\!\mathbb{R}_c,+_c\!>$ are isomorphic \dots and $<\!U_n,\cdot\!>$ and $<\!\mathbb{Z}_n,+_n\!>$ are isomorphic \dots}\\
+\begin{story}
+	Let the points on the unit circle $U$ be of the form $e^{i\theta}$ where $0 \le \theta < 2\pi$
+	and the points on the line segment $\mathbb{R}_c$ be of the form $x$ where $0 \le x < c$.
+	Define a function $\phi : U \to R_c$ such that $\phi(e^{i\theta}) = \frac{c\theta}{2\pi}$. Clearly, $\phi$ is a bijection and
+	$$\phi(e^{i\theta_1}\cdot e^{i\theta_2}) = \phi(e^{i(\theta_1+\theta_2)}) = c \frac{\theta_1 +_{2\pi} \theta_2}{2\pi} = c (\frac{\theta_1}{2\pi} +_1 \frac{\theta_2}{2\pi}) = \frac{c\theta_1}{2\pi} +_c \frac{c\theta_2}{2\pi} = \phi(e^{i\theta_1})\ +_c\ \phi(e^{i\theta_2})$$
+	And thus $\phi$ is a homomorphism.\\
+
+	%For example, let $c = 8.5$, $\theta_1 = 300^{\circ} = 10\pi/6$ and $\theta_2 = 240^{\circ} = 4\pi/3$\\
+	%$\phi(e^{i\frac{10\pi}{6}}) = \frac{8.5 \times 10\pi}{6 \times 2\pi} = 7.083$ and 
+	%ie, $\phi(\cos \frac{10\pi}{6}+i\sin \frac{10\pi}{6}) = \phi(\frac{1}{2}-\frac{\sqrt{3}}{2}i) = 7.083$\\
+	%$\phi(e^{i\frac{4\pi}{3}}) = \frac{8.5 \times 4\pi}{3 \times 2\pi} = 5.666$\\
+	%ie, $\phi(\cos \frac{4\pi}{3}+i\sin \frac{4\pi}{3}) = \phi(-\frac{1}{2}-\frac{\sqrt{3}}{2}i) = 5.666$\\
+	%$\phi(e^{i\frac{10\pi}{6}} \cdot e^{i\frac{4\pi}{3}}) = \phi(e^{i\pi}) = \frac{8.5\pi}{2\pi} = 4.250$\\
+	%ie, $\phi(\cos \pi+i\sin \pi) = \phi(-1+0i) = 4.250$\\
+	%Clearly, $7.083 + 5.666 = 12.750 \cong 4.250 \pmod{8.5}$\\
+
+	Let the $n$th roots of unity be of the form $e^{ik\frac{2\pi}{n}}$ where $0 \le k < n$
+	and set $\mathbb{Z}_n = \{ 0,1,\cdots,(n-1) \}$.
+	Define a function $\phi : U_n \to \mathbb{Z}_n$ such that $\phi(e^{ik\frac{2\pi}{n}}) = k$.
+	Clearly, $\phi$ is a bijection and a homomorphism.
+	$$\phi(e^{ik\frac{2\pi}{n}}\cdot e^{im\frac{2\pi}{n}}) = \phi(e^{i(k+m)\frac{2\pi}{n}}) = k +_n m = \phi(e^{ik\frac{2\pi}{n}})\ +_n\ \phi(e^{im\frac{2\pi}{n}})$$
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S3.7 pp. 44}
+\textbf{Exercise 27 asks \dots for a collection of binary algebraic structures, the relation $\iso$ \dots is an equivalence relation \dots}\\
+\begin{story}
+	Let $A,B,C$ be three binary algebraic structures.
+	\begin{enumerate}
+		\item The identity map $i : A \to A$ is an isomorphism.
+		\item Let $\phi : A \to B$ be an isomorphism, then $\phi^{-1} : B \to A$ is also an isomorphism.
+		\item Let $\phi : A \to B$, $\psi : B \to C$ be isomorphisms, then $\psi\circ\phi : A \to C$ is an isomorphism.
+	\end{enumerate}
+	Thus the isomorphism relation is an equivalence relation on binary algebraic structures.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S3.10 pp. 45}
+\textbf{A structural property of a binary algebraic structure is one that must be shared by any isomorphic structure.}\\
+\begin{story}
+	We say that a property is structral if isomorphic structures agree on them.
+	Associativity is structural implies that 
+	\begin{enumerate*}
+		\item if a binary algebraic structure is associative, all binary algebraic structures isomorphic to it are associative and
+		\item if a binary algebraic structure is non-associative, then all binary algebraic structures isomorphic to it are non-associative.
+	\end{enumerate*}
+\end{story}
+
+\textbf{\dots We have exhibited a structural property that distinguishes these two structures.}
+\textbf{\phantom{}}\marginpar{\S3.15 pp. 47}\\
+\begin{story}
+	Proving that there doesn't exists an isomorphism between two structures is a hard task.
+	At times, it is easier to show that two binary structures doesn't share a structural property.
+	And we know that, this wouldn't happen unless they are non-isomorphic.\\
+
+	In the above case, $<\!\mathbb{Q},+\!>$ and $<\!\mathbb{Z},+\!>$ are non-isomorphic.
+	The equation $x+x = c$ has a solution $x$ for all $c \in \mathbb{Q}$.
+	However, $x+x = c$ doesn't have a solution $x \in \mathbb{Z}$ for $c = 3 \in \mathbb{Z}$.
+	Thus, the existence of solution for linear equations is a structral property that distinuguishes $\mathbb{Q}$ from $\mathbb{Z}$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S4.13 pp. 54}
+\textbf{$GL(n,\mathbb{R}) \iso GL(\mathbb{R}^n)$}\\
+\begin{story}
+	$GL(n,\mathbb{R})$ is the general linear group of degree $n$ which is the set of all invertible $n \times n$ matrices with real entries.
+	$GL(\mathbb{R}^n)$ is the set of all invertible linear transformations from $\mathbb{R}^n$ onto $\mathbb{R}^n$. 
+	The isomorphism comes from the context of linear algebra.\\
+
+	We have an isomophism $\phi : GL(n,\mathbb{R}) \to GL(\mathbb{R}^n)$ defined by $\phi(a_{ij}) = T$ such that $T(\epsilon_j)=(a_{1j},a_{2j},\cdots,a_{nj})$ where $\epsilon_j = (\delta_{1j},\delta_{2j},\cdots,\delta_{nj})$.
+\end{story}
+
+\begin{challenge}
+	The isomorphism $\phi : GL(n,\mathbb{R}) \to GL(\mathbb{R}^n)$ correpsonds to the standard ordered basis $\{\epsilon_1,\epsilon_2,\cdots,\epsilon_n\}$ of vector space $\mathbb{R}^n$ over the field $\mathbb{R}$.
+	And thus the set of all isomorphisms from $GL(n,\mathbb{R})$ onto $GL(\mathbb{R}^n)$ is isomorphic to the set of all ordered basis for the vector space $\mathbb{R}^n(\mathbb{R})$.
+\end{challenge}
+
+\textbf{There is only one group of three elements, up to isomorphism.}
+\textbf{\phantom{}}\marginpar{pp. 59}\\
+\begin{story}
+	Consider any two groups of order 3. They are isomorphic.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S5.4 pp. 64}
+\textbf{If a subset $H$ of a group $G$ is closed under the binary operation of $G$ and if $H$ with the induced operation from $G$ is itself a group, then $H$ is a subgroup of $G$.}\\
+\begin{story}
+	Suppose $G$ is a group.
+	Then $G$ is a nonempty set and the binary operation $\ast$ on $G$ satisfies the group axioms.
+	Suppose $H$ is a subset of the set $G$.
+	If $\ast$ on any two elements of $H$ gives an element of $H$, then $H$ is closed under the operation $\ast$.
+	If $H$ with this induced operation $\ast$ is a group, then $H$ is a subgroup of $G$.\\
+
+	A subset of $G$ with some other operation may also form a group.
+	Such groups are not considered as subgroups.
+\end{story}
+
+\textbf{There are two different types of group structures of order 4.}
+\textbf{\phantom{}}\marginpar{\S5.9 pp. 65}\\
+\begin{story}
+	Any group of order 4 is either isomorphic to group $V$ or group $\mathbb{Z}_4$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S5.16 pp. 67}
+\textbf{Let $G$ be the multiplicative group of all invertible $n\times n$ matrices with entries in $\mathbb{C}$ and  let $T$ be subset of $G$ consisting of those matrices with determinant $1$. \dots T is a subgroup of $G$.}\\
+\begin{story}
+	$G \iso GL(n,\mathbb{C})$ and $T \iso SL(n,\mathbb{C})$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S5.22 pp. 68}
+\textbf{\dots let $n\mathbb{Z}$ be the cyclic subgroup $<\!n\!>$ of $\mathbb{Z}$.}\\
+\begin{story}
+	Group $\mathbb{Z}$ is the additive group of integers.
+	And $n\mathbb{Z}$ is the subgroup of $\mathbb{Z}$ generated by $n$.
+	For example : The set of all even integers, $2\mathbb{Z}$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S6.1 pp. 73}
+\textbf{Every cyclic group is abelian.}
+
+\textbf{\phantom{}}\marginpar{\S6.6 pp. 75}
+\textbf{A subgroup of a cyclic group is cyclic.}
+
+\textbf{\phantom{}}\marginpar{\S6.7 pp. 75}
+\textbf{The subgroups of $\mathbb{Z}$ are precisely the groups $n\mathbb{Z}$ \dots}\\
+\begin{story}
+	Subgroups of cyclic groups are cyclic.
+	And the cyclic subgroups of $\mathbb{Z}$ with generator $n$ is $n\mathbb{Z}$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S6.10 pp. 77}
+\textbf{Let $G$ be a cyclic group with generator $a$. If the order of $G$ is infinite, then $G$ is isomorphic to $<\!\mathbb{Z},+\!>$. If $G$ has finite order, then $G$ is isomorphic to $<\!\mathbb{Z}_n,+_n\!>$.}\\
+\begin{challenge}
+	The cardinality of $\{a^n : n \in \mathbb{Z} \}$ is atmost $\aleph_0$.
+	Thus every cyclic group is countable.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S6.14 pp. 78}
+\textbf{Let $G$ be a cyclic group with $n$ elements and generated by $a$. Let $b \in G$ and $b = a^s$. Then $b$ generates a cyclic subgroup $H$ of $G$ containing $n/d$ elements, where $d$ is the greatest common divisor of $n$ and $s$. Also $<\!a^s\!> = <\!a^t\!>$ if and only if $\gcd(s,n) = \gcd(t,n)$.}
+\begin{challenge}
+	For example : $4 \in \mathbb{Z}_{10}$ has order $\gcd(4,10) = 2$.
+	Also $<\!4\!> \iso <\!8\!>$.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S6.16 pp. 79}
+\textbf{If $a$ is a generator of a cyclic group of order $n$, then the other generators of $G$ are the elements of the forms $a^r$, where $r$ is relatively prime to $n$.}\\
+\begin{challenge}
+	For example : $\mathbb{Z}_{18}$ has $\phi(18) = 6$ generators.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S6.18 pp. 79}
+\textbf{Subgroup diagram of $\mathbb{Z}_{18}$}\\
+\begin{challenge}
+	Collection of subgroups of $\mathbb{Z}_n$ forms a lattice.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S7 pp.82}
+\textbf{Suppose we want to find as small a subgroup as possible that contains both $a$ and $b$ \dots $a^2b^4a^{-3}b^2a^5$ \dots we cannot ``simplify'' \dots since $G$ may not be abelian.}\\
+\begin{doubt}
+	Algorithm to find the order of a finitely generated subgroup of $SL(n,\mathbb{C})$.
+\end{doubt}
+
+\textbf{\phantom{}}\marginpar{\S7.5 pp. 83}
+\textbf{If there is a finite set $\{a_i : i \in I\}$ that generates $G$, then $G$ is finitely generated.}\\
+\begin{challenge}
+	Every finitely generated group has countable order.
+	The group $<\!\mathbb{Q},+\!>$ is a countable group which cannot be finitely generated.
+\end{challenge}
+
+\chapter{Permutations, Cosets and Direct Products}
+\textbf{\phantom{}}\marginpar{\S8 pp. 89}
+\textbf{Each element of $GL(2,\mathbb{R})$ yields a transformation of the plane $\mathbb{R}^2$ into itself.}\\
+\begin{doubt}
+	Nature of transformations yielded by $SL(2,\mathbb{R})$\\
+	Characterise contractions from $\mathbb{R}^2$ into itself\\
+	Characterise fixed points of transformations
+\end{doubt}
+
+\textbf{\phantom{}}\marginpar{\S8.3 pp. 90}
+\textbf{A permutation of a set is a function $\phi : A \to A$ that is both one to one and onto.}\\
+\begin{challenge}
+	Permuations are bijections.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S8.7 pp. 92}
+\textbf{If sets $A$ and $B$ have the same cardinality, then $S_A \iso S_B$.}\\
+\begin{story}
+	Permutation group depends only on the cardinality of the set.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S8.7 pp. 93}
+\textbf{$S_3$ has the minimum order for any nonabelian group.}\\
+\begin{story}
+	Every group of order 2,3,4 and 5 are abelian.
+	And there is only one nonabelian group of order six upto isomophism.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S8.15 pp. 96}
+\textbf{Let $G$ and $G'$ be groups and let $\phi : G \to G'$ be a one-to-one function such that $\phi(xy) = \phi(x)\phi(y)$ \dots Then $\phi[G]$ is a subgroup of $G'$ \dots and $\phi$ provides an isomorphism of $G$ and $\phi[G]$.}
+
+\textbf{\phantom{}}\marginpar{\S8.16 pp. 96}
+\textbf{Every group is isomorphic to a group of permutations.}
+
+\textbf{\phantom{}}\marginpar{\S8.17 pp. 97}
+\textbf{The map $\phi$ \dots is the left regular representation of $G$, and the map $\mu$ \dots is the right regular representation of $G$.}\\
+\begin{story}
+	$\phi : G \to S_G$, $\phi(x) = \lambda_x$ where $\lambda_x : G \to G$, $\lambda_x(g) = xg$.
+	Thus $G \iso \phi[G]$.
+	$\mu : G \to S_G$, $\mu(x) = \rho_{x^{-1}}$ where $\rho_x : G \to G$, $\rho_x(g) = gx$.
+	Thus $G \iso \rho[G]$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S10.10 pp. 114}
+\textbf{Let $H$ be a subgroup of a finite group $G$. Then the order of $H$ is a divisor of the order of $G$.}
+
+\textbf{\phantom{}}\marginpar{\S10.11 pp. 114}
+\textbf{Every group of prime order is cyclic.}
+
+\textbf{\phantom{}}\marginpar{\S10.12 pp. 115}
+\textbf{The order of an element of a finite group divides the order of the group.}
+
+\textbf{\phantom{}}\marginpar{\S10.14 pp. 115}
+\textbf{ Suppose \dots $K \le H \le G$, and suppose $(H:K)$ and $(G:H)$ are both finite. Then $(G:K)$ is finite and $(G:K) = (G:H)(H:K)$.}\\
+\begin{story}
+	$H$ divides $G$ into $G/H$ cosets.
+	And $K$ divides $H$ into $H/K$ cosets.
+	Thus $K$ divies each $H$ coset into $G/K$ cosets.
+	Thus, $K$ divides $G$ into $G/H \times H/K = G/K$ cosets.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S12 pp. 128}
+\textbf{Given any subset $S$ of $\mathbb{R}^2$, the isometries of $\mathbb{R}^2$ that carry $S$ onto itself \dots is the group of symmetries of $S$ in $\mathbb{R}^2$.}
+
+\textbf{\phantom{}}\marginpar{S12 pp. 128}
+\textbf{It can be proved that every isometry of the plane is one of just four types \dots translation \dots rotation \dots reflection \dots glide reflection \dots }\\
+\begin{story}
+	Every combination of those four isometries is one among these four or an identity map.
+\end{story}
+
+
+\textbf{\phantom{}}\marginpar{\S12.5 pp. 129}
+\textbf{Every finite group $G$ of isometries of the plane is isomorphic to either $\mathbb{Z}_n$ or to a dihedral group $D_n$ for some positive integer $n$.}
+
+\textbf{\phantom{}}\marginpar{\S12 pp. 130}
+\textbf{A discrete frieze consists of a pattern of finite width and height that is repeated endlessly in both directions along its baseline \dots those isometries that carry each basic pattern onto itself or onto another instance of the pattern \dots frieze group.\dots. Each group obtained can be shown to be isomorphic to one of $\mathbb{Z}$, $D_\infty$, $\mathbb{Z} \times \mathbb{Z}_2$, or $D_\infty \times \mathbb{Z}_2$.}
+
+\textbf{\phantom{}}\marginpar{\S12 pp. 131}
+\textbf{\dots study of symmetries when a pattern \dots is repeated by translations \dots to fill the entire plane.\dots wallpaper groups or or the plane crystallographic groups.\dots there are 17 different types of wallpaper patterns \dots}
+
+\chapter{Homomorphism and Factor Groups}
+\textbf{\phantom{}}\marginpar{\S13.4 pp. 140}
+\textbf{Let $F$ be \dots all functions mapping $\mathbb{R}$ onto $\mathbb{R}$ \dots. Let $\phi_c : F \to \mathbb{R}$ be the evaluation homomorphism defined by $\phi_c(f) = f(c)$ \dots}\\
+\begin{story}
+	The function $\phi_c$ evaluates each function $f \in F$ at real number $c$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S13.8 pp. 141}
+\textbf{Let $G$ \dots be a direct product of groups. The projection map $\pi_i: G \to G_i$ where $\pi_i(g_1,g_2,\cdots,g_n) = g_i$ is a homomorphism \dots}\\
+\begin{story}
+	The direct product group, $G = G_1 \times G_2 \times \cdots \times G_n$ can be imagined as an $n$-dimensional space with $G_i$ as $i$th co-ordinate axis.
+	Then projection map $\pi_i$ of points in $n$-dimensional space $G$ are their shadows on the $i$th axis.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S13.12 pp. 142}
+\textbf{Let $\phi$ be a homomorphism of a group $G$ into a group $G'$. \dots \\ $\phi$ preserves identity element, inverses and subgroups.}
+
+\textbf{\phantom{}}\marginpar{\S13.13 pp. 143}
+\textbf{Let $\phi: G \to G'$ be a homomorphism of groups. The subgroup $\phi^{-1}[\{e'\}] = \{ x \in G : \phi(x) = e'\}$ \dots is the kernel of $\phi$ \dots}\\
+\begin{story}
+	Homomorphism $\phi$ carries a subgroup of $G$ into the trivial subgroup of $G'$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S13.15 pp. 144}
+\textbf{Let $\phi : G \to G'$ be a group homomorphism, and let $H = \ker(\phi)$ \dots $\phi^{-1}[\phi(a)]$ is the left coset $aH$ \dots and \dots right coset $Ha$ \dots}
+
+\textbf{\phantom{}}\marginpar{\S13.18 pp. 145}
+\textbf{A group homomorphism $\phi : G \to G'$ is a one-to-one map if and only if $\ker(\phi) = \{e\}$}
+
+\textbf{\phantom{}}\marginpar{\S13.19 pp. 146}
+\textbf{A subgroup $H$ of a group $G$ is normal if its left and right cosets coincide \dots $gH = Hg$ for all $g \in G$.}
+
+\textbf{\phantom{}}\marginpar{\S13.20 pp. 146}
+\textbf{If $\phi : G \to G'$ is a group homomorphism, then $\ker(\phi)$ is a normal subgroup of $G$.}
+
+\textbf{\phantom{}}\marginpar{\S13.E7 pp. 147}
+\textbf{Let $\phi_i : G_i \to G_1 \times G_2 \cdots \times G_r$ be given by $\phi_i(g_i) = (e_1,e_2,\cdots,g_i,\cdots,e_r)$ \dots is an injection map \dots}
+
+\textbf{\phantom{}}\marginpar{\S14.1 pp. 151}
+\textbf{Let $\phi : G \to G'$ be a group homomorphism with kernel $H$. Then the cosets of $H$ form a factor group.\dots Also, the map $\mu : G/H \to \phi[G]$ defined by $\mu(aH) = \phi(a)$ is an isomorphism.\dots}
+
+\textbf{\phantom{}}\marginpar{\S14.6 pp. 153}
+\textbf{The group $G/H$ \dots is the factor group \dots of $G$ by $H$.}\\
+\begin{challenge}
+	Kernel of every group homomorphism $\phi : G \to G'$ is a normal subgroup $H$ of $G$.
+	And there is a factor group $G/H$ of $G$ for every group homomorphism.
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S14.9 pp. 153}
+\textbf{Let $H$ be a normal subgroup of $G$. Then $\gamma : G \to G/H$ given by $\gamma(x) = xH$ is a homomorphism with kernel $H$.}\\
+\begin{story}
+	The homomorphism from group $G$ into its factor group $G/H$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S14.11 pp. 154}
+\textbf{Let $\phi : G \to G'$ be a group homomorphism with kernel $H$. Then $\phi[G]$ is a group, and $\mu : G/H \to \phi[G]$ given by $\mu(gH) = \phi(g)$ is an isomorphism. If $\gamma : G \to G/H$ is the homomorphism given by $\gamma(g) = gH$, then $\phi(g) = \mu\gamma(g)$ for each $g \in G$.}
+
+
+%\textbf{\phantom{}}\marginpar{}
+%\chapter{Homomorphisms and Factor Groups}
+%\chapter{Rings and Fields}
+%\chapter{Ideal and Factor Rings}
+%\chapter{Extension Fields}
+%\chapter{Advanced Group Theory}
+%\chapter{Groups in Topology}
+%\chapter{Factorization}
+%\chapter{Automorphisms and Galois Theory}
+%\bibliographystyle{ieeetr}
+\bibliographystyle{apalike}
+\bibliography{reference}
+\end{document}

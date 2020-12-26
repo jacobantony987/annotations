@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt,openany]{book}
+\usepackage{glimpse}
+
+\title{Annotations : Elementary topoics in Differential Geometry, John A. Thorpe}
+\author{Jacob Antony\\jacobantony987@gmail.com}
+
+\begin{document}
+\maketitle
+
+\chapter{Graphs and Level Sets}
+\textbf{\phantom{}}\marginpar{\S1 pp. 1}
+\textbf{Given a function $f : U \to \mathbb{R}$ where $U \subset \mathbb{R}^{n+1}$, its level sets are the sets $f^{-1}(c)$ \dots}\\
+\begin{story}
+	The set of points in the domain of $f$ at which $f$ attains the value $c$ is the level set at height $c$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S1 pp. 1}
+\textbf{The graph of a function $f : U \to \mathbb{R}$ is the subset of $\mathbb{R}^{n+2}$ defined by \dots }\\
+\begin{story}
+	The graph of function $f$ is the set of points $\{ (x_1,x_2,\cdots,x_{n+1},f(x_1,x_2,\cdots,x_{n+1})) \}$.
+\end{story}
+
+\chapter{Vector Fields}
+\textbf{\phantom{}}\marginpar{\S2 pp. 6}
+\textbf{A vector at point $p \in \mathbb{R}^{n+1}$ is a pair $\bar{v} = (p,v)$ where $v \in \mathbb{R}^{n+1}$.}\\
+\begin{story}
+	For example : $(1,2,2,4)$ is a vector at $(1,2)$ defined by $v=2p$.
+	However, $(1,2,2,4)$ is not a 4-dimensional point in this context.
+	But, the vector $(2,4)$ with it's tail shifted from $(0,0)$ to $(1,2)$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2 pp. 6}
+\textbf{The vectors at $p$ form a vector space $\mathbb{R}^{n+1}_p$ of dimension $n+1$ \dots}\\
+\begin{story}
+	The vector space $\mathbb{R}^{n+1}_p$ is identical with $\mathbb{R}^{n+1}$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2 pp. 6}
+\textbf{\dots our rule of addition does not permit the addition of vectors at different points of $\mathbb{R}^{n+1}$.}\\
+\begin{story}
+	The addition of two vectors at different points is not defined.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2 pp. 6}
+\textbf{A vector field $\bar{X}$ on $U \subset \mathbb{R}^{n+1}$ is a function which assigns to each point of $U$ a vector at that point.}\\
+\begin{story}
+	Consider a function $X : U \to \mathbb{R}^{n+1}$.
+	Suppose $X(p) = v$ and $X(q) = w$.
+	Then $\bar{X}(p) = (p,v)$ and $\bar{X}(q) = (q,w)$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2 pp. 7}
+\textbf{A vector field $\bar{X}$ on $U$ is smooth if the associated function\\ $X : U \to \mathbb{R}^{n+1}$ is smooth.}\\
+\begin{story}
+	A vector space is smooth if all partial derivatives of the component functions $X_i : U \to \mathbb{R}$ exists and are continuous.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2 pp. 8}
+\textbf{Associated with each smooth function $f : U \to \mathbb{R}^{n+1}$ is a smooth vector field on $U$ called the gradient $\nabla f$ of $f$ \dots}\\
+\begin{story}
+	Suppose all partial derivatives exists and are continuous for $f : U \to \mathbb{R}$.
+	Let $p \in U$, then $\nabla f(p) = (p,\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\cdots,\frac{\partial f}{\partial x_{n+1}})$\\
+	For example : Let $f(x,y) = xy^2$. Then $\nabla f(p) = (p,v)$ where $v = (y^2,2xy)$.\\
+	ie, $\nabla f$ assigns to the vector $(1,3)$ a vector $(9,6)$ at $(1,3)$.
+\end{story}
+
+%\bibliographystyle{ieeetr}
+\bibliographystyle{apalike}
+\bibliography{reference}
+\end{document}

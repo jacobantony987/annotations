@@ -1,0 +1,148 @@
+\documentclass[a4paper,12pt,openany]{book}
+\usepackage{glimpse}
+
+\title{Annotations : Mathematical Analysis\\ 2nd Edition, Tom M. Apostol}
+\author{Jacob Antony\\jacobantony987@gmail.com}
+
+\begin{document}
+\maketitle
+\chapter{The Real \& Complex Number Systems}
+\textit{\S1.2-11 is the axiomatic characterisation of the set of all real numbers.}\\
+
+\textbf{\phantom{}}\marginpar{\S1.1 pp. 1}
+\textbf{We assume there exists a nonempty set $\mathbb{R}$ of objects, called real numbers \dots}\\
+\begin{story}
+	We take a collection of objects and write a few rules.
+	Now we imagine a new world filled with those objects which strictly follows our new rules.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S1.2 pp. 1}
+\textbf{\dots we assume the existence of two operations, called addition and multiplication \dots}\\
+\begin{story}
+	We can not define operations on a collection of undefined objects.
+	Therefore, we add a few more rules and indirectly define the operations required for our purpose.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S1.3 pp. 2}
+\textbf{We also assume the existence of a relation $<$ \dots}\\
+\begin{story}
+	These objects have an order which is again defined indirectly.
+	And we also have rules on the effect of operations on this order.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S1.6 pp. 4}
+\textbf{A set of real numbers is an inductive set if \dots A real number is a positive integer if it belongs to every inductive set \dots}\\
+\begin{story}
+	Here, integers is defined from real numbers using principle of induction.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S1.17 pp. 12}
+\textbf{The fact that a real number might have two different decimal representations \dots}\\
+\begin{doubt}
+	A real number has two different decimal representations if and only if it is rational and $\gcd(q,10) \ne 1$ where $q$ is its quotient.
+\end{doubt}
+
+\chapter{Some basic notations of set theory}
+\textbf{\phantom{}}\marginpar{Def 2.1 pp. 33}
+\textbf{$(a,b) = \{ \{a\},\ \{a,b\}\}$}\\
+\begin{story}
+	The ordered pairs are defined using sets.
+\end{story}
+
+\begin{doubt}
+	Define an $n$-tuple using sets
+\end{doubt}
+
+\textbf{\phantom{}}\marginpar{\S2.6 pp.35}
+\textbf{If two function $F$ and $G$ satisfy the inclusion relation $G \subseteq F$, we say that $G$ is a restriction of $F$ or that $F$ is an extension of $G$.}\\
+\begin{story}
+	Relations are set of ordered pairs $(x,y)$.
+	And functions are relations with the property that there is no two ordered pairs with the same first member.
+	And if $(x,y) \in G$, then we write $y = G(x)$.\\
+
+	Suppose $G \subseteq F$.
+	Then every ordered pair in $G$ is also there in $F$.
+	$(x,y) \in G \implies y = G(x) = F(x)$.
+	That is, $G$ agrees with $F$ everywhere it is defined.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{Thm 2.10 pp.37}
+\textbf{If the function $F$ is one-to-one on its domain, then $\check{F}$ is also a function.}\\
+\begin{story}
+	Given a function $F$, $F$ is a relation.
+	And the converse relation of $F$ given by $\check{F} = \{ (y,x) : (x,y) \in F \}$.
+	If $F$ is one-to-one, then there is no two ordered pairs in $F$ with the same second member.
+	%The relation $\check{F}$ is obtained from $F$ by reversing the order of ordered pairs.
+	Thus $\check{F}$ will have no two ordered pairs with the same first member.
+	Therefore, $\check{F}$ is a function.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2.8 pp.37}
+\textbf{$H\circ(G \circ F) = (H \circ G) \circ F$ always holds whenever each side of the equation has a meaning.}\\
+\begin{story}
+	LHS has meaning only if $\mathscr{R}(F) \subset \mathscr{D}(G)$ and $\mathscr{R}(G \circ F) \subset \mathscr{D}(H)$.
+	RHS has meaning only if $\mathscr{R}(G) \subset \mathscr{D}(H)$ and $\mathscr{R}(F) \subset \mathscr{D}(H \circ G)$.
+	%Suppose RHS has meaning.
+	%We have, $\mathscr{D}(H \circ G) = \mathscr{D}(G)$.
+	%Therefore $\mathscr{R}(F) \subset \mathscr{D}(G)$ and $G \circ F$ is well-defined.
+	%Clearly, $\mathscr{R}(G \circ F) \subset \mathscr{R}(G) \subset \mathscr{D}(H)$.
+	%Therefore, existence of $(H \circ G) \circ F$ is a stronger notion than the other.
+\end{story}
+
+\begin{challenge}
+	Existence of $(H \circ G) \circ F$ is a stronger notion than that of $H \circ ( G \circ F)$
+\end{challenge}
+
+\textbf{\phantom{}}\marginpar{\S2.9 pp. 38}
+\textbf{\dots Such a composite function is said to be a subsequence of $s$.}\\
+\begin{story}
+	Given a sequence $s$, a subsequence $s_k$ is obtained by dropping some terms of $s$.
+	But, we are not allowed to re-order the remaining terms of the sequence.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2.10 pp. 38}
+\textbf{Also, if $A \sim B$ and if $B \sim C$, then $A \sim C$.}\\
+\begin{story}
+	Given $A \sim B$, then there exists a bijection $f : A \to B$.
+	Also $B \sim C$, thus there exists another bijection $g : B \to C$.
+	Clearly, $f \circ g : A \to C$ is a bijection and therefore $A \sim C$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2.11 pp. 38}
+\textbf{if $\{1,2,\cdots,n\} \sim \{1,2,\cdots,m\}$, then $m = n$.}\\
+\begin{story}
+	Let $N = \{ 1,2,\cdots,n \}$ and $M = \{ 1,2,\cdots,m \}$.
+	Given, $N \sim M$, thus there exists a bijection $f : N \to M$.
+	$|M| = |f(N)|$ since $f$ is surjective.
+	And $|f(N)| = |N|$ since $f$ is injective.
+	Clearly, $|M| = |N|$.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{\S2.11 pp. 38}
+\textbf{\dots an infinite set must be similar to some proper subset of itself \dots whereas a finite set cannot be \dots }\\
+\begin{story}
+	A set which is not finite is defined as infinite set.
+	However, the existence of equi-numerous proper subset is a important characterisation for infinite sets.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{Thm 2.16 pp. 39}
+\textbf{Let $S$ \dots countable set \dots $A \subseteq S$. If $A$ is finite, there is nothing to prove, \dots assume that $A$ is infinite (which means $S$ is also infinite.)}\\
+\begin{story}
+	If $A$ is finite, then $A$ is countable.
+	If $A$ is infinite, this proof requires a sequence with range $S$.
+	%From which a subsequence with range $A$ is constructed.
+	There exists an infinite sequence with distinct terms of $S$ only if $S$ is infinite.
+	But, $S$ is countable doesn't necessarily mean that $S$ is infinite.
+	%If $S$ has an infinite subset, then it is infinite.
+\end{story}
+
+\textbf{\phantom{}}\marginpar{Thm 2.17 pp. 40}
+\textbf{A situation like $s_n = 0.1999\cdots$ and $y = 0.2000\cdots$ cannot occur here because \dots}
+\begin{story}
+	In \S1.17, it is proved that there exists only two different infinite decimal represenation for any real number.
+\end{story}
+
+%\bibliographystyle{ieeetr}
+\bibliographystyle{apalike}
+\bibliography{reference}
+\end{document}
